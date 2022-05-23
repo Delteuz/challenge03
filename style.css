@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+.section1 {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+.bg-design1 {
+  position: absolute;
+  height: 90vh;
+  width: 36%;
+  min-width: 360px;
+  transform: translateX(-25%);
+  border-radius: 0 0 50% 50%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #591db4, #d524d0);
+  z-index: -1;
+}
+.bg-design2 {
+  position: absolute;
+  height: 90vh;
+  width: 36%;
+  transform: translateX(25%);
+  border-radius: 50% 50% 0 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(242, 242, 242);
+  z-index: -1;
+  min-width: 360px;
+}
+/* INSIDE PHONE */
+.phone-frame {
+  height: 510px;
+  width: 250px;
+  border: 10px solid white;
+  border-radius: 35px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  margin: 30px;
+  box-shadow: 2px 3px 30px rgba(72, 72, 72, 0.205);
+}
+.phone-frame::before {
+  content: "";
+  height: 22.5px;
+  width: 55%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: white;
+  border-radius: 10px;
+  z-index: 2;
+  transform: translate(-50%, -45%);
+}
+
+.phone-top {
+  display: flex;
+  flex-flow: wrap row;
+  background-image: linear-gradient(to right, #8838ff, #e942ff);
+  align-items: center;
+  height: 65px;
+  padding: 20px 10px;
+  border-radius: 6px;
+}
+.phone-top img {
+  height: 30px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.phone-top .pic {
+  margin-inline: 5px;
+}
+
+.phone-top h1 {
+  font-size: 12px;
+  color: white;
+}
+.phone-top p {
+  font-size: 8px;
+  color: white;
+}
+.options-icon {
+  font-size: 12px;
+  margin-left: auto;
+  color: white;
+}
+.back-icon {
+  color: white;
+}
+
+.phone-screen {
+  background: white;
+  height: 100%;
+}
+.screen-body {
+  background: #e9e5ec;
+
+  height: 100%;
+}
+.chat-text {
+  max-width: 60%;
+  border-radius: 10px 10px 10px 0;
+  background: #ede1ff;
+  color: blue;
+  padding: 10px;
+  font-size: 8px;
+  margin: 5px;
+}
+.chat-text > p {
+  color: #8838ff;
+}
+.chat-images {
+  display: flex;
+  margin-top: 10px;
+  flex-flow: wrap row;
+  justify-content: flex-end;
+}
+.chat-images img {
+  height: 50px;
+  border-radius: 10px;
+  margin-inline: 3px;
+}
+.chat-4,
+.chat-5 {
+  box-shadow: 0 2px 3px rgba(158, 158, 158, 0.336);
+  background-color: white;
+  margin-left: auto;
+  border-radius: 10px 10px 0px 10px;
+}
+.chat4-5 {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: column wrap;
+}
+.chat4-5 p {
+  color: rgb(42, 32, 39);
+}
+.chatpolls {
+  display: flex;
+  flex-flow: column wrap;
+}
+.chat-poll {
+  max-width: 80%;
+  border-radius: 10px 10px 10px 0px;
+  background-image: linear-gradient(to right, #e942ff, #8838ff);
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 8px;
+  padding: 10px;
+  margin: 3px 5px;
+}
+.chat-poll > p:nth-child(2) {
+  margin-left: 5px;
+}
+.chat-poll > p:nth-child(3) {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: bold;
+}
+.text-field {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  display: flex;
+  font-size: 10px;
+  justify-content: space-between;
+  border-radius: 20px;
+  align-items: center;
+  width: 95%;
+  margin: 9px auto;
+  height: 35px;
+  box-shadow: 0px 1px 2px rgba(110, 110, 110, 0.369);
+}
+.text-field > p {
+  margin-left: 5px;
+  color: hsl(0, 4%, 68%);
+}
+.text-field .icon-next {
+  background-color: hsl(271, 36%, 31%);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: grid;
+  place-items: center;
+  color: white;
+}
+.text-box {
+  text-align: center;
+  margin: 16px;
+  width: 480px;
+}
+.text-box h1 {
+  margin: 20px;
+  color: hsl(271, 36%, 31%);
+}
+.text-box p {
+  color: hsl(270, 7%, 64%);
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 480px) {
+  .section1 {
+    flex-flow: row wrap;
+  }
+  .text-box {
+    text-align: left;
+    margin-left: 100px;
+  }
+  .text-box h1 {
+    margin-left: 0;
+  }
+}
